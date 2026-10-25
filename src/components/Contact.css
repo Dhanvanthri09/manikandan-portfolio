@@ -80,12 +80,20 @@
   transition: all 0.3s ease; /* Added for smooth glowing */
 }
 
-/* --- THE NEW NEON GLOW HOVER EFFECT --- */
-.info-card:hover, .contact-form-container:hover {
-  border-color: var(--cyan);
-  box-shadow: 0 0 20px rgba(100, 255, 218, 0.2);
+/* Base state for smooth transitions */
+.info-card, .contact-form-container {
+  border: 1px solid var(--bg-lightest-navy);
+  transition: all 0.4s ease-in-out;
 }
 
+/* --- ELEGANT MULTI-LAYERED GLOW --- */
+.info-card:hover, .contact-form-container:hover {
+  border-color: var(--cyan);
+  box-shadow: 
+    0 0 10px rgba(100, 255, 218, 0.3),   /* Tight bright glow */
+    0 0 25px rgba(100, 255, 218, 0.15),  /* Medium spread */
+    0 0 45px rgba(100, 255, 218, 0.05);  /* Wide, subtle fade */
+}
 .contact-form {
   display: flex;
   flex-direction: column;
