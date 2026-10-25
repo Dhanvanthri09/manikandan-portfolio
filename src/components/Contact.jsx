@@ -80,20 +80,23 @@ const Contact = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.2 }}
           >
-            <form className="contact-form" onSubmit={(e) => e.preventDefault()}>
+           <form className="contact-form" action="https://formsubmit.co/dhanushmani379@gmail.com" method="POST">
+              {/* Optional: This hidden input disables the captcha so it sends immediately */}
+              <input type="hidden" name="_captcha" value="false" />
+              
               <div className="form-row">
                 <div className="input-group">
-                  <input type="text" placeholder="Your Name" required />
+                  <input type="text" name="name" placeholder="Your Name" required />
                 </div>
                 <div className="input-group">
-                  <input type="email" placeholder="Your Email" required />
+                  <input type="email" name="email" placeholder="Your Email" required />
                 </div>
               </div>
               <div className="input-group">
-                <input type="text" placeholder="Subject" required />
+                <input type="text" name="subject" placeholder="Subject" required />
               </div>
               <div className="input-group">
-                <textarea rows="5" placeholder="Your Message" required></textarea>
+                <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
               </div>
               <button type="submit" className="submit-btn">Send Message</button>
             </form>

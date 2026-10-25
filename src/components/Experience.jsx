@@ -23,7 +23,7 @@ const experienceData = [
   {
     id: 1,
     role: "VLSI Design & Verification Trainee",
-    company: "Maven Silicon Softech Private Limited",
+    company: "VLSI Guru Institute",
     location: "Bengaluru, India",
     date: "September 2023 - June 2024",
     tasks: [
