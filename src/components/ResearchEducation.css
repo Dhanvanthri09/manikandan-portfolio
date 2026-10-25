@@ -1,0 +1,114 @@
+.academic-wrapper {
+  padding: 100px 5%;
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+}
+
+.academic-section {
+  width: 100%;
+  scroll-margin-top: 100px; 
+}
+
+.academic-card {
+  background-color: var(--bg-light-navy);
+  border-radius: 12px;
+  padding: 35px;
+  display: flex;
+  gap: 25px;
+  align-items: flex-start;
+  border: 1px solid var(--bg-lightest-navy);
+  transition: all 0.3s ease;
+  margin-top: 40px;
+}
+
+.academic-card:hover {
+  border-color: var(--cyan);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px -15px rgba(2, 12, 27, 0.7);
+}
+
+.card-icon-container {
+  background-color: var(--bg-navy);
+  color: var(--cyan);
+  min-width: 50px;
+  height: 50px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--bg-lightest-navy);
+}
+
+.card-content {
+  flex: 1;
+}
+
+.card-title {
+  color: var(--text-white);
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+  line-height: 1.4;
+}
+
+.card-subtitle {
+  color: var(--text-light-slate);
+  font-size: 1rem;
+  margin-bottom: 15px;
+}
+
+/* Research Tag Styling */
+.status-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: rgba(255, 255, 255, 0.05);
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-family: var(--font-mono);
+  color: var(--text-slate);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.status-tag .dot {
+  width: 8px;
+  height: 8px;
+  background-color: #a855f7; /* Purple dot as seen in reference */
+  border-radius: 50%;
+  box-shadow: 0 0 8px #a855f7;
+}
+
+/* Education Details Styling */
+.education-details {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+  color: var(--text-slate);
+}
+
+.education-details .divider {
+  color: var(--bg-lightest-navy);
+}
+
+.highlight-text {
+  color: var(--cyan);
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .academic-card {
+    flex-direction: column;
+    padding: 25px;
+    gap: 15px;
+  }
+  
+  .card-icon-container {
+    margin-bottom: 10px;
+  }
+}

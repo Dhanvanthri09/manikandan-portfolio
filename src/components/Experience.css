@@ -1,0 +1,112 @@
+.experience-section {
+  padding: 100px 5%;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.experience-container {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.experience-card {
+  background-color: var(--bg-light-navy);
+  border-radius: 8px;
+  padding: 35px;
+  border: 1px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.experience-card:hover {
+  border-color: var(--cyan-tint);
+}
+
+.experience-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 30px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--bg-lightest-navy);
+}
+
+.role-title {
+  color: var(--text-white);
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+}
+
+.company-info {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--cyan);
+  font-family: var(--font-mono);
+  font-size: 0.95rem;
+}
+
+.date-location {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 5px;
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+}
+
+.date {
+  color: var(--text-light-slate);
+}
+
+.location {
+  color: var(--text-slate);
+  font-size: 0.85rem;
+}
+
+/* 2-Column Grid for Tasks */
+.tasks-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px 30px;
+}
+
+.task-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.task-bullet {
+  color: var(--cyan);
+  font-size: 1.2rem;
+  line-height: 1.2;
+}
+
+.task-item p {
+  margin: 0;
+  color: var(--text-slate);
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .experience-header {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .date-location {
+    align-items: flex-start;
+  }
+
+  .tasks-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .experience-card {
+    padding: 25px;
+  }
+}

@@ -1,0 +1,158 @@
+.about-section {
+  padding: 100px 5%;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.section-header {
+  margin-bottom: 40px;
+}
+
+.section-title {
+  font-size: 1rem;
+  font-family: var(--font-mono);
+  color: var(--text-light-slate);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.about-content {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 60px;
+  align-items: center;
+}
+
+/* Left Side: Minimalist Chip Diagram */
+.about-diagram {
+  background-color: var(--bg-light-navy);
+  border-radius: 10px;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 450px;
+}
+
+.chip-diagram {
+  width: 140px;
+  height: 140px;
+  border: 2px solid var(--cyan);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin-bottom: 50px;
+}
+
+.chip-core {
+  color: var(--cyan);
+  font-family: var(--font-mono);
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+
+/* Drawing the chip pins with repeating linear gradients */
+.chip-pins {
+  position: absolute;
+}
+
+.chip-pins.vertical {
+  left: 20px;
+  right: 20px;
+  height: 15px;
+  background: repeating-linear-gradient(90deg, transparent, transparent 12px, var(--cyan) 12px, var(--cyan) 16px);
+}
+
+.chip-pins.vertical.top { top: -15px; }
+.chip-pins.vertical.bottom { bottom: -15px; }
+
+.chip-pins.horizontal {
+  top: 20px;
+  bottom: 20px;
+  width: 15px;
+  background: repeating-linear-gradient(0deg, transparent, transparent 12px, var(--cyan) 12px, var(--cyan) 16px);
+}
+
+.chip-pins.horizontal.left { left: -15px; }
+.chip-pins.horizontal.right { right: -15px; }
+
+.diagram-labels {
+  display: flex;
+  gap: 15px;
+  color: var(--text-light-slate);
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  letter-spacing: 1px;
+}
+
+/* Right Side: Text and Stats */
+.about-subtitle {
+  font-size: clamp(2rem, 4vw, 2.5rem);
+  color: var(--text-white);
+  margin-bottom: 25px;
+  line-height: 1.2;
+}
+
+.highlight {
+  color: var(--cyan);
+}
+
+.about-description {
+  margin-bottom: 20px;
+  font-size: 1.05rem;
+  color: var(--text-slate);
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-top: 40px;
+}
+
+.stat-card {
+  background-color: var(--bg-light-navy);
+  padding: 20px;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+  border: 1px solid transparent;
+}
+
+.stat-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--cyan-tint);
+}
+
+.stat-card h4 {
+  color: var(--cyan);
+  font-size: 1.5rem;
+  margin-bottom: 5px;
+  font-family: var(--font-mono);
+}
+
+.stat-card p {
+  margin: 0;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--text-white);
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 968px) {
+  .about-content {
+    grid-template-columns: 1fr;
+  }
+  
+  .about-diagram {
+    min-height: 350px;
+  }
+}
+
+@media (max-width: 480px) {
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+}

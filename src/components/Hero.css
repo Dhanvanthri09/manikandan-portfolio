@@ -1,0 +1,114 @@
+.hero-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 100vh;
+  padding: 0 10%;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.hero-content {
+  flex: 1;
+  max-width: 600px;
+}
+
+.greeting {
+  color: var(--cyan);
+  font-family: var(--font-mono);
+  margin-bottom: 20px;
+  font-size: 1rem;
+}
+
+.name {
+  font-size: clamp(40px, 8vw, 70px);
+  margin: 0;
+  line-height: 1.1;
+  white-space: nowrap; 
+}
+
+.title {
+  color: var(--text-light-slate);
+  font-size: clamp(20px, 4vw, 30px);
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.tags {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.tag {
+  color: var(--text-white);
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.description {
+  margin-bottom: 40px;
+  max-width: 500px;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+.btn-secondary {
+  color: var(--text-white);
+  border-bottom: 1px solid var(--text-white);
+  padding: 0.5rem 0;
+  display: flex;
+  align-items: center;
+}
+
+.social-links {
+  display: flex;
+  gap: 20px;
+}
+
+.social-links a {
+  color: var(--text-light-slate);
+}
+
+.social-links a:hover {
+  color: var(--cyan);
+  transform: translateY(-3px);
+}
+
+/* Image styling */
+.hero-image-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.image-wrapper {
+  width: 300px;
+  height: 300px;
+  background-color: var(--bg-light-navy);
+  border-radius: 10px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid var(--cyan);
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .hero-section {
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    gap: 50px;
+    padding: 100px 5%;
+  }
+
+  .tags, .action-buttons, .social-links {
+    justify-content: center;
+  }
+}
