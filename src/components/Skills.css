@@ -34,8 +34,9 @@
 }
 
 .skill-card:hover {
-  border-color: var(--cyan-tint);
+  border-color: var(--cyan);
   transform: translateY(-5px);
+  box-shadow: 0 0 20px rgba(100, 255, 218, 0.2);
 }
 
 .skill-category-title {

@@ -20,7 +20,8 @@
 }
 
 .experience-card:hover {
-  border-color: var(--cyan-tint);
+  border-color: var(--cyan);
+  box-shadow: 0 0 20px rgba(100, 255, 218, 0.2);
 }
 
 .experience-header {

@@ -31,6 +31,7 @@
   flex-direction: column;
   gap: 30px;
   border: 1px solid var(--bg-lightest-navy);
+  transition: all 0.3s ease; /* Added for smooth glowing */
 }
 
 .info-item {
@@ -76,6 +77,13 @@
   padding: 40px;
   border-radius: 12px;
   border: 1px solid var(--bg-lightest-navy);
+  transition: all 0.3s ease; /* Added for smooth glowing */
+}
+
+/* --- THE NEW NEON GLOW HOVER EFFECT --- */
+.info-card:hover, .contact-form-container:hover {
+  border-color: var(--cyan);
+  box-shadow: 0 0 20px rgba(100, 255, 218, 0.2);
 }
 
 .contact-form {
